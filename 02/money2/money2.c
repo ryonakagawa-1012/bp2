@@ -4,6 +4,8 @@
 #define WINDOW_X_SIZE 1000
 #define WINDOW_Y_SIZE 600
 
+void money(int);
+
 int main() {
     int money[6] = {};
     int coin = 500;
@@ -31,7 +33,7 @@ int main() {
 
     HgSetFont(HG_G, 50);  // フォントをゴシック体、サイズ50に設定
 
-    /**********文字の位置を計算**********/
+    /**********文字の位置を計算して描画**********/
     HgTextSize(&x_500_text_size, &y_500_text_size,
                "500");  // 文字(500)の大きさを取得して変数に格納
     HgTextSize(&x_100_text_size, &y_100_text_size,
@@ -45,23 +47,40 @@ int main() {
     HgTextSize(&x_1_text_size, &y_1_text_size,
                "1");  // 文字(1)の大きさを取得して変数に格納
 
-    x_500_text_pos = ((WINDOW_X_SIZE / 6) * 1 - x_500_text_size) /
-                     2;  // 文字(500)のx座標を計算
+    x_500_text_pos =
+        ((WINDOW_X_SIZE / 6) - x_500_text_size) / 2;  // 文字(500)の位置を計算
 
-    x_100_text_pos = ((WINDOW_X_SIZE / 6) * 2 - x_100_text_size) /
-                     2;  // 文字(100)のx座標を計算
+    x_100_text_pos =
+        (WINDOW_X_SIZE / 6) +
+        ((WINDOW_X_SIZE / 6) - x_100_text_size) / 2;  // 文字(100)の位置を計算
 
-    x_50_text_pos = ((WINDOW_X_SIZE / 6) * 3 - x_50_text_size) /
-                    2;  // 文字(50)のx座標を計算
+    x_50_text_pos =
+        (WINDOW_X_SIZE / 6) * 2 +
+        ((WINDOW_X_SIZE / 6) - x_50_text_size) / 2;  // 文字(50)の位置を計算
 
-    x_10_text_pos = ((WINDOW_X_SIZE / 6) * 4 - x_10_text_size) /
-                    2;  // 文字(10)のx座標を計算
+    x_10_text_pos =
+        (WINDOW_X_SIZE / 6) * 3 +
+        ((WINDOW_X_SIZE / 6) - x_10_text_size) / 2;  // 文字(10)の位置を計算
 
     x_5_text_pos =
-        ((WINDOW_X_SIZE / 6) * 5 - x_5_text_size) / 2;  // 文字(5)のx座標を計算
+        (WINDOW_X_SIZE / 6) * 4 +
+        ((WINDOW_X_SIZE / 6) - x_5_text_size) / 2;  // 文字(5)の位置を計算
 
     x_1_text_pos =
-        ((WINDOW_X_SIZE / 6) * 6 - x_1_text_size) / 2;  // 文字(1)のx座標を計算
+        (WINDOW_X_SIZE / 6) * 5 +
+        ((WINDOW_X_SIZE / 6) - x_1_text_size) / 2;  // 文字(1)の位置を計算
+
+    HgText(x_500_text_pos, 150, "500");  // 文字(500)を描画
+
+    HgText(x_100_text_pos, 150, "100");  // 文字(100)を描画
+
+    HgText(x_50_text_pos, 150, "50");  // 文字(50)を描画
+
+    HgText(x_10_text_pos, 150, "10");  // 文字(10)を描画
+
+    HgText(x_5_text_pos, 150, "5");  // 文字(5)を描画
+
+    HgText(x_1_text_pos, 150, "1");  // 文字(1)を描画
 
     /**********ここまで**********/
 
