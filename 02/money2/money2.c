@@ -1,7 +1,8 @@
 #include <handy.h>
 #include <stdio.h>
 
-#include <draw_img.c>
+#include "draw_img.c"
+#include "cal_text_center.c"
 
 #define WINDOW_X_SIZE 1200
 #define WINDOW_Y_SIZE 600
@@ -88,6 +89,10 @@ int main() {
 
     /**********ここまで**********/
 
+    /**********表示したテキストの中心を計算**********/
+
+
+
     for (i = 0; i < 6; i++) {
         money[i] = total / coin;
         total = total % coin;
@@ -114,7 +119,7 @@ int main() {
 void money_draw(int kind, int sum) {
     switch (kind) {
         case 500:
-
+            draw500(x_500_text_pos, COIN_Y - 50);
             break;
 
         case 100:
