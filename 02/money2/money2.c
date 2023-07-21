@@ -6,6 +6,8 @@
 
 #define COIN_Y 100
 
+#define SLEEP_TIME 0.2
+
 void money_draw(int, int);  // お金を描画する関数
 
 double x_500_text_size, y_500_text_size;  // 文字(500)の大きさを格納する変数
@@ -26,7 +28,6 @@ int main() {
     int money[6] = {};
     int coin = 500;
     int total = 0;
-
 
     int i;  // カウンタ変数
 
@@ -112,53 +113,59 @@ int main() {
     return 0;
 }
 
-#include "draw_img.c"
 #include "cal_img_center.c"
+#include "draw_img.c"
 
 void money_draw(int kind, int sum) {
     double x_text_center, y_text_center;
-    
+
     cal_center(&x_text_center, &y_text_center, kind);
-    
+
     switch (kind) {
         case 500:
-            for(int i = 0; i < sum; i++){
-                draw500(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw500(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
 
             break;
 
         case 100:
-            for(int i = 0; i < sum; i++){
-                draw100(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw100(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
-            
+
             break;
 
         case 50:
-            for(int i = 0; i < sum; i++){
-                draw50(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw50(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
-            
+
             break;
 
         case 10:
-            for(int i = 0; i < sum; i++){
-                draw10(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw10(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
-            
+
             break;
 
         case 5:
-            for(int i = 0; i < sum; i++){
-                draw5(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw5(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
-            
+
             break;
 
         case 1:
-            for(int i = 0; i < sum; i++){
-                draw1(x_text_center, (y_text_center + 100)+25*i);
+            for (int i = 0; i < sum; i++) {
+                draw1(x_text_center, (y_text_center + 100) + 25 * i);
+                HgSleep(SLEEP_TIME);
             }
 
             break;
