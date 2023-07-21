@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #define WINDOW_X_SIZE 1200
-#define WINDOW_Y_SIZE 600
+#define WINDOW_Y_SIZE 1000
 
 #define COIN_Y 100
 
@@ -122,26 +122,44 @@ void money_draw(int kind, int sum) {
     
     switch (kind) {
         case 500:
-            draw500(x_text_center, y_text_center);
+            for(int i = 0; i < sum; i++){
+                draw500(x_text_center, (y_text_center + 100)+25*i);
+            }
+
             break;
 
         case 100:
+            for(int i = 0; i < sum; i++){
+                draw100(x_text_center, (y_text_center + 100)+25*i);
+            }
             
             break;
 
         case 50:
+            for(int i = 0; i < sum; i++){
+                draw50(x_text_center, (y_text_center + 100)+25*i);
+            }
             
             break;
 
         case 10:
+            for(int i = 0; i < sum; i++){
+                draw10(x_text_center, (y_text_center + 100)+25*i);
+            }
             
             break;
 
         case 5:
+            for(int i = 0; i < sum; i++){
+                draw5(x_text_center, (y_text_center + 100)+25*i);
+            }
             
             break;
 
         case 1:
+            for(int i = 0; i < sum; i++){
+                draw1(x_text_center, (y_text_center + 100)+25*i);
+            }
 
             break;
     };
