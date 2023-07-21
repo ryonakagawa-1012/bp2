@@ -1,0 +1,11 @@
+echo 1 | ./leapyear1
+echo 2 | ./leapyear1
+echo 3 | ./leapyear1
+echo 4 | ./leapyear1
+echo 5 | ./leapyear1
+echo 6 | ./leapyear1
+echo 7 | ./leapyear1
+echo 8 | ./leapyear1
+echo 9 | ./leapyear1
+echo 10 | ./leapyear1
+bash leap.sh
