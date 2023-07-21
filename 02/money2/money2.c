@@ -116,10 +116,13 @@ int main() {
 #include "cal_img_center.c"
 
 void money_draw(int kind, int sum) {
-    int x_center, y_center;
+    double x_text_center, y_text_center;
+    
+    cal_center(&x_text_center, &y_text_center, kind);
+    
     switch (kind) {
         case 500:
-
+            draw500(x_text_center, y_text_center);
             break;
 
         case 100:
