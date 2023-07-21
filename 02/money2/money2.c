@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 #include "draw_img.c"
-#include "cal_text_center.c"
 
 #define WINDOW_X_SIZE 1200
 #define WINDOW_Y_SIZE 600
@@ -18,17 +17,18 @@ double x_10_text_size, y_10_text_size;  // 文字(10)の大きさを格納する
 double x_5_text_size, y_5_text_size;  // 文字(5)の大きさを格納する変数
 double x_1_text_size, y_1_text_size;  // 文字(1)の大きさを格納する変数
 
-double x_500_text_pos, y_500_text_pos;  // 文字(500)の位置を格納する変数
-double x_100_text_pos, y_100_text_pos;  // 文字(100)の位置を格納する変数
-double x_50_text_pos, y_50_text_pos;  // 文字(50)の位置を格納する変数
-double x_10_text_pos, y_10_text_pos;  // 文字(10)の位置を格納する変数
-double x_5_text_pos, y_5_text_pos;    // 文字(5)の位置を格納する変数
-double x_1_text_pos, y_1_text_pos;    // 文字(1)の位置を格納する変数
+double x_500_text_pos;  // 文字(500)の位置を格納する変数
+double x_100_text_pos;  // 文字(100)の位置を格納する変数
+double x_50_text_pos;   // 文字(50)の位置を格納する変数
+double x_10_text_pos;   // 文字(10)の位置を格納する変数
+double x_5_text_pos;    // 文字(5)の位置を格納する変数
+double x_1_text_pos;    // 文字(1)の位置を格納する変数
 
 int main() {
     int money[6] = {};
     int coin = 500;
     int total = 0;
+
 
     int i;  // カウンタ変数
 
@@ -38,7 +38,7 @@ int main() {
 
     HgSetFont(HG_G, 50);  // フォントをゴシック体、サイズ50に設定
 
-    /**********文字の位置を計算して描画**********/
+    /**********文字を計算して描画**********/
     HgTextSize(&x_500_text_size, &y_500_text_size,
                "500");  // 文字(500)の大きさを取得して変数に格納
     HgTextSize(&x_100_text_size, &y_100_text_size,
@@ -90,8 +90,6 @@ int main() {
     /**********ここまで**********/
 
     /**********表示したテキストの中心を計算**********/
-
-
 
     for (i = 0; i < 6; i++) {
         money[i] = total / coin;
