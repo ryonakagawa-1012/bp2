@@ -1,7 +1,7 @@
 #include <handy.h>
 #include <stdio.h>
 
-#include <cal_img_center.c>
+#include <draw_img.c>
 
 #define WINDOW_X_SIZE 1200
 #define WINDOW_Y_SIZE 600
@@ -118,23 +118,19 @@ void money_draw(int kind, int sum) {
             break;
 
         case 100:
-            img = HgImageLoad("image/money_coin_reiwa_100.png");
             break;
 
         case 50:
-            img = HgImageLoad("image/money_coin_reiwa_50.png");
             break;
 
         case 10:
-            img = HgImageLoad("image/money_coin_reiwa_10.png");
             break;
 
         case 5:
-            img = HgImageLoad("image/money_coin_reiwa_5.png");
             break;
 
         case 1:
-            img = HgImageLoad("image/money_coin_reiwa_1.png");
+
             break;
     };
 }
