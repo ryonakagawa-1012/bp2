@@ -1,0 +1,1 @@
+void draw500(int x, int y, ){};
