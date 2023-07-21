@@ -1,8 +1,6 @@
 #include <handy.h>
 #include <stdio.h>
 
-#include "draw_img.c"
-
 #define WINDOW_X_SIZE 1200
 #define WINDOW_Y_SIZE 600
 
@@ -114,22 +112,30 @@ int main() {
     return 0;
 }
 
+#include "draw_img.c"
+#include "cal_img_center.c"
+
 void money_draw(int kind, int sum) {
+    int x_center, y_center;
     switch (kind) {
         case 500:
-            draw500(x_500_text_pos, COIN_Y - 50);
+
             break;
 
         case 100:
+            
             break;
 
         case 50:
+            
             break;
 
         case 10:
+            
             break;
 
         case 5:
+            
             break;
 
         case 1:
