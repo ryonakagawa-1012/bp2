@@ -6,9 +6,7 @@
 
 #define COIN_Y 100
 
-#define SLEEP_TIME 0.2
-
-void money_draw(int, int);  // お金を描画する関数
+void money_draw(int, int);
 
 double x_500_text_size, y_500_text_size;  // 文字(500)の大きさを格納する変数
 double x_100_text_size, y_100_text_size;  // 文字(100)の大きさを格納する変数
@@ -116,6 +114,8 @@ int main() {
 #include "cal_img_center.c"
 #include "draw_img.c"
 
+#define SLEEP_TIME 0.2
+
 void money_draw(int kind, int sum) {
     double x_text_center, y_text_center;
 
@@ -170,4 +170,4 @@ void money_draw(int kind, int sum) {
 
             break;
     };
-}
+};
