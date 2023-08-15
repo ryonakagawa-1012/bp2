@@ -19,14 +19,11 @@ int main() {
     HgSetColor(HG_BLUE);
     HgCircle(x + CENTER, y + CENTER, 3.0);
 
-    tmp_x = x;
-    tmp_y = y;
-
-    x = tmp_x * cos(M_PI / 4) - tmp_y * sin(M_PI / 4);
-    y = tmp_x * sin(M_PI / 4) + tmp_y * cos(M_PI / 4);
+    x1 = x * cos(M_PI / 4) - y * sin(M_PI / 4);
+    y1 = x * sin(M_PI / 4) + y * cos(M_PI / 4);
 
     HgSetColor(HG_RED);
-    HgCircle(x + CENTER, y + CENTER, 3.0);
+    HgCircle(x1 + CENTER, y1 + CENTER, 3.0);
 
     HgGetChar();
     HgClose();
