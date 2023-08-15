@@ -15,7 +15,7 @@ int main() {
     HgSetWidth(1.0);
     HgSetColor(HG_BLACK);
     HgLine(5.0, CENTER, 395.0, CENTER);
-    HgLine(CENTER, 5.0, CENTER, 395.0);
+    HgLine(200.0, 5.0, CENTER, 395.0);
 
     x = 150.0;
     y = 90.0;
