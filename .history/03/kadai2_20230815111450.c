@@ -10,7 +10,6 @@ int main() {
 
     for (i = 0; i < 5; i++) {
         if (i == 0) {
-            max = data[0];
         } else if (max < data[i]) {
             max = data[i];
         }
