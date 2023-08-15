@@ -12,7 +12,7 @@ int main() {
     for (i = 0; i < 5; i++) {
         if (i == 0) {
             max = data[0];
-        } else if (max < data[i]) {
+        } else if (max <= data[i]) {
             max = data[i];
         } else if (max == data[i]) {
             noneFlag++;
@@ -31,8 +31,6 @@ int main() {
     if (noneFlag == 5) {
         printf("none");
     }
-
-    printf("\n");
 
     printf("\n");
 
