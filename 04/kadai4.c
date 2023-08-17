@@ -2,7 +2,8 @@
 #include <math.h>
 #include <stdio.h>
 
-#define CENTER 200.0
+#define X_CENTER 200.0
+#define Y_CENTER 200.0
 
 int main() {
     double x[4] = {-10.0, 30.0, -30.0, 10.0};
@@ -14,14 +15,14 @@ int main() {
     HgSetWidth(1.0);
     HgSetColor(HG_BLACK);
 
-    HgLine(5.0, CENTER, 395.0, CENTER);
-    HgLine(CENTER, 5.0, CENTER, 395.0);
+    HgLine(5.0, X_CENTER, 395.0, X_CENTER);
+    HgLine(X_CENTER, 5.0, X_CENTER, 395.0);
 
     HgSetColor(HG_BLUE);
 
     for (i = 0; i < 3; i++) {
-        HgLine(x[i] + CENTER, y[i] + CENTER, x[i + 1] + CENTER,
-               y[i + 1] + CENTER);
+        HgLine(x[i] + X_CENTER, y[i] + Y_CENTER, x[i + 1] + X_CENTER,
+               y[i + 1] + Y_CENTER);
     }
 
     for (j = 0; j < 2; j++) {
@@ -36,8 +37,8 @@ int main() {
         }
 
         for (i = 0; i < 3; i++) {
-            HgLine(x[i] + CENTER, y[i] + CENTER, x[i + 1] + CENTER,
-                   y[i + 1] + CENTER);
+            HgLine(x[i] + X_CENTER, y[i] + Y_CENTER, x[i + 1] + X_CENTER,
+                   y[i + 1] + Y_CENTER);
         }
     }
 
