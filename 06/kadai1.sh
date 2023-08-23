@@ -1,0 +1,1 @@
+echo 'test=[123]' | ./kadai1 
