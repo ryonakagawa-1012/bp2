@@ -8,7 +8,7 @@ typedef struct {
 
 int main() {
     Person bob = {"bob", 170.0, 60.0};
-    printf("%10s %5.1f %5.1f\n", bob.name, bob.height, bob.weight);
+    printf("%10s %5.1f\n", bob.name, bob.height, bob.weight);
 
     return 0;
 }
