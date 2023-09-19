@@ -29,7 +29,7 @@ int main() {
     printf("max : %d\n", max);
 
     for (i = 0; i < j; i++) {
-        printf("data[%d] : %d\n", i, data2[i]);
+        printf("data[%d] : %d\n", i, data2[j - i - 1]);
     }
 
     printf("\n");

@@ -3,7 +3,7 @@
 #define NUM 5
 
 int main() {
-    int i, j;
+    int i, j = 0;
     int max;
     int data1[NUM], data2[NUM];
 
@@ -26,11 +26,13 @@ int main() {
         }
     }
 
-    printf("max")
+    printf("max : %d\n", max);
 
-        for (i = 0; i < NUM; i++) {
-        printf("data[%d] : %d\n", i, data2[i]);
+    for (i = 0; i < j; i++) {
+        printf("data[%d] : %d\n", i, data2[j - i - 1]);
     }
+
+    printf("\n");
 
     return 0;
 }
