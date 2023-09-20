@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int cmp(int num1, int num2, int num3) {
+    if (num1 > num2) {
+        if (num1 > num3) {
+            printf("answer: %d\n", num1);
+        } else {
+            printf("answer: %d\n", num3);
+        }
+    } else {
+        if (num2 > num3) {
+            printf("answer: %d\n", num2);
+
+        } else {
+            printf("answer: %d\n", num3);
+        }
+    }
+}
+
+int main() {
+    int num1, num2;
+
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+
+    printf("Higher: %d\n", cmp(num1, num2));
+
+    return 0;
+}
