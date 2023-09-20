@@ -12,12 +12,8 @@ int main() {
     while (strcmp(inStr, end) != 0) {
         if (strlen(outStr) + strlen(inStr) >= 20) {
             printf("# %s #\n", outStr);
-
-            for (int i = 0; i < 100; i++) {
-                outStr[i] = '\0';
-            }
+            outStr[1
         }
-
         sprintf(outStr, "%s %s", outStr, inStr);
 
         printf("string >> ");

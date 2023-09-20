@@ -14,7 +14,7 @@ int main() {
             printf("# %s #\n", outStr);
 
             for (int i = 0; i < 100; i++) {
-                outStr[i] = '\0';
+                outStr[i] = "\0";
             }
         }
 

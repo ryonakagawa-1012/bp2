@@ -10,18 +10,18 @@ int main() {
     scanf("%s", inStr);
 
     while (strcmp(inStr, end) != 0) {
-        if (strlen(outStr) + strlen(inStr) >= 20) {
-            printf("# %s #\n", outStr);
-
-            for (int i = 0; i < 100; i++) {
-                outStr[i] = '\0';
-            }
-        }
-
         sprintf(outStr, "%s %s", outStr, inStr);
+
+        if (strlen(outStr) >= 20) {
+            printf("# %s #\n", outStr);
+        }
 
         printf("string >> ");
         scanf("%s", inStr);
+
+        if (strcmp(inStr, end) == 0) {
+            printf("%lu\n", strlen(outStr));
+        }
     }
 
     printf("#back.#\n");
