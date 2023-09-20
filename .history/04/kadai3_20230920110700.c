@@ -1,6 +1,5 @@
 /*
-    連続した回転を表示するプログラム
-    g2354017 中川 諒
+
 */
 #include <handy.h>
 #include <math.h>
