@@ -1,7 +1,3 @@
-/*
-    三数から、最も大きいものを表示する処理
-    g2354017 中川 諒
-*/
 #include <stdio.h>
 
 int cmp(int num1, int num2, int num3) {

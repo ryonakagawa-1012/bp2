@@ -1,7 +1,4 @@
-/*
-    二数から、より大きい方を求めるプログラム
-    g2354017 中川 諒
-*/
+/**/
 #include <stdio.h>
 
 int cmp(int num1, int num2) {
