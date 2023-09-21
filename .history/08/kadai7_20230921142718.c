@@ -1,7 +1,4 @@
-/*
-    うるう年判定プログラム
-    g2354017 中川 諒
-*/
+/**/
 #include <stdio.h>
 
 int leap(int year) {
