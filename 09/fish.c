@@ -1,9 +1,13 @@
+/*
+    左右を向いて泳ぐサカナ
+    g2354017 中川 諒
+*/
 #include <handy.h>
 #include <math.h>
 #include <stdio.h>
 
 # define True 1
-# define False
+# define False 0
 
 void fish_left(double x, double y, double size){
     HgSetColor(HG_RED);
@@ -71,9 +75,9 @@ int main() {
             x += dx;
 
         if (x + dx < size) {
-            is_left = 0;
+            is_left = False;
         } else if (x + dx > (400.0 - size)) {
-            is_left = 1;
+            is_left = True;
         }
 
         HgSleep(0.1);
