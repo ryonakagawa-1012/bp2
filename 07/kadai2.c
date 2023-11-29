@@ -63,13 +63,11 @@ int main() {
                     if (tile[j][i] == WHITE) {
                         HgSetFillColor(HG_WHITE);
 
-                        HgBoxFill(DOT_SIZE * j, DOT_SIZE * i, DOT_SIZE,
-                                  DOT_SIZE, 0);
+                        HgBoxFill(DOT_SIZE * j, DOT_SIZE * i, DOT_SIZE, DOT_SIZE, 0);
                     } else if (tile[j][i] == BLACK) {
                         HgSetFillColor(HG_BLACK);
 
-                        HgBoxFill(DOT_SIZE * j, DOT_SIZE * i, DOT_SIZE,
-                                  DOT_SIZE, 0);
+                        HgBoxFill(DOT_SIZE * j, DOT_SIZE * i, DOT_SIZE, DOT_SIZE, 0);
                     }
                 }
             }
