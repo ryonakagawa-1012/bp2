@@ -22,9 +22,9 @@ int main() {
     Flag = leap(year);
 
     if (Flag == 1) {
-        printf("is leap\n");
+        printf(" is leap\n");
     } else {
-        printf("\n");
+        printf(" is not leap\n");
     }
 
     return 0;
