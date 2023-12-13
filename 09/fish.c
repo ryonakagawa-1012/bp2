@@ -68,15 +68,21 @@ int main() {
             fish_right(x, y, size);
         }
 
-        if (y + dy < size || y + dy > (400.0 - size)) dy *= (-1.0);
+        if (y + dy < size || y + dy > (400.0 - size)){
+            dy *= (-1.0);
+        }
+
             y += dy;
 
-        if (x + dx < size || x + dx > (400.0 - size)) dx *= (-1.0);
+        if (x + dx < size || x + dx > (400.0 - size)){
+            dx *= (-1.0);
+        }
+
             x += dx;
 
-        if (x + dx < size) {
+        if (0 < dx) {
             is_left = False;
-        } else if (x + dx > (400.0 - size)) {
+        } else {
             is_left = True;
         }
 
