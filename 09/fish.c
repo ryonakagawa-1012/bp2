@@ -10,36 +10,36 @@
 # define False 0
 
 void fish_left(double x, double y, double size){
-    HgSetColor(HG_RED);
-    HgSetFillColor(HG_RED);
-    HgFanFill(x, y, size, 1.25 * M_PI, 0.75 * M_PI, 0);
-    HgMoveTo(x + size, y);
-    HgLineTo(x + size * 3.0, y);
-    HgLineTo(x + size * 4.0, y - size);
-    HgMoveTo(x + size * 3.0, y);
-    HgLineTo(x + size * 4.0, y + size);
-    HgSetFillColor(HG_WHITE);
-    HgCircleFill(x + size / 3.0, y + size / 2.0, size / 4.0, 0);
-    HgSetColor(HG_RED);
-    for (int i = 0; i < 5; i++) {
+    HgSetColor(HG_RED); // 赤色
+    HgSetFillColor(HG_RED); 
+    HgFanFill(x, y, size, 1.25*M_PI, 0.75*M_PI, 0); // アタマを描く
+    HgMoveTo(x+size, y); // 胴骨
+    HgLineTo(x+size*3.0, y); // 胴骨
+    HgLineTo(x+size*4.0, y-size); // 尾び
+    HgMoveTo(x+size*3.0, y); 
+    HgLineTo(x+size*4.0, y+size); // 尾び
+    HgSetFillColor(HG_WHITE); // 白色 
+    HgCircleFill(x+size/3.0, y+size/2.0, size/4.0, 0); // 目を描く
+    HgSetColor(HG_RED); // 赤色
+    for(int i=0; i<5; i++) { // 胴骨
         HgLine(x + size * 1.2 + i * size / 3.0, y - size / 2.0,
            x + size * 1.2 + i * size / 3.0, y + size / 2.0);
     }
 }
 
 void fish_right(double x, double y, double size){
-    HgSetColor(HG_RED);
-    HgSetFillColor(HG_RED);
-    HgFanFill(x, y, size, 0.25 * M_PI, 1.75 * M_PI, 0);
-    HgMoveTo(x - size, y);
-    HgLineTo(x - size * 3.0, y);
-    HgLineTo(x - size * 4.0, y - size);
-    HgMoveTo(x - size * 3.0, y);
-    HgLineTo(x - size * 4.0, y + size);
-    HgSetFillColor(HG_WHITE);
-    HgCircleFill(x - size / 3.0, y + size / 2.0, size / 4.0, 0);
-    HgSetColor(HG_RED);
-    for (int i = 0; i < 5; i++) {
+    HgSetColor(HG_RED); // 赤色
+    HgSetFillColor(HG_RED); 
+    HgFanFill(x, y, size, 0.25 * M_PI, 1.75 * M_PI, 0);  // アタマを描く
+    HgMoveTo(x - size, y);  // 胴骨
+    HgLineTo(x - size * 3.0, y); // 胴骨
+    HgLineTo(x - size * 4.0, y - size);  // 尾び
+    HgMoveTo(x - size * 3.0, y); 
+    HgLineTo(x - size * 4.0, y + size); // 尾び
+    HgSetFillColor(HG_WHITE);   // 白色
+    HgCircleFill(x - size / 3.0, y + size / 2.0, size / 4.0, 0); // 目を描く
+    HgSetColor(HG_RED); // 赤色
+    for (int i = 0; i < 5; i++) { // 胴骨
         HgLine(x - size * 1.2 - i * size / 3.0, y - size / 2.0,
            x - size * 1.2 - i * size / 3.0, y + size / 2.0);
     }
