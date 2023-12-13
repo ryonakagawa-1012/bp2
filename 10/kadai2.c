@@ -1,3 +1,8 @@
+/*
+    群れになって泳ぐ魚を描くプログラム
+    g2354017 中川 諒
+*/
+
 #include <handy.h>
 #include <math.h>
 #include <stdio.h>
@@ -78,13 +83,13 @@ int main() {
         HgClear();
 
         for (i = 0; i < FISH_NUM; i++) { 
-            if (i == 0) {
+            if (i == 0) { // 王様の場合は青色の円を描く
                 is_king = True;
             } else {
                 is_king = False;
             }
 
-            if (is_left[i]) {
+            if (is_left[i]) {  // 向きによって描く魚を変える
                 fish_left(x[i], y[i], size[i], is_king);
             }
             else{
