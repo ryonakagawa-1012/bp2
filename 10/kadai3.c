@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int max(int *data) {
+int max(int data[]) {
     int ans = data[0];
     
     for (int i = 1; i < 5; i++){
