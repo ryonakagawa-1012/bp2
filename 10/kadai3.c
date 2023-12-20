@@ -1,3 +1,8 @@
+/*
+    最大の数を求める関数
+    354017 中川 諒
+*/
+
 #include <stdio.h>
 
 int max(int data[]) {
